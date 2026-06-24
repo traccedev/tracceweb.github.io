@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ============================================================
+  RSS FEED — manual template
+  ============================================================
+  How to use:
+    1. Replace https://your-domain.example/ with your real URL.
+    2. When you publish a post, copy an <item> block to the TOP of
+       the list (newest first) and fill it in.
+    3. Update <lastBuildDate> to the current time.
+
+  Notes for e-readers / Calibre:
+    - <description> is the summary; <content:encoded> carries the
+      full HTML body, which Calibre turns into the ebook chapter.
+    - <pubDate> MUST be RFC-822 format and the weekday must match the
+      date, e.g. "Thu, 18 Jun 2026 09:00:00 +0000". Wrong weekdays
+      make some readers reject the item.
+    - <guid> just has to be unique and stable per post; it does NOT
+      need to be a real URL when isPermaLink="false".
+  ============================================================
+-->
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tracce</title>
+    <link>https://your-domain.example/</link>
+    <description>A small, anonymous journal of thoughts.</description>
+    <language>en</language>
+    <lastBuildDate>Thu, 18 Jun 2026 09:00:00 +0000</lastBuildDate>
+    <!-- Self-reference: helps readers auto-discover the feed URL. -->
+    <atom:link href="https://your-domain.example/rss.xml" rel="self" type="application/rss+xml" />
+
+    <!-- ===== NEWEST POST (full text example) ===== -->
+    <item>
+      <title>On keeping a record no one asked for</title>
+      <link>https://your-domain.example/#latest-post</link>
+      <guid isPermaLink="false">Tracce-012</guid>
+      <pubDate>Thu, 18 Jun 2026 09:00:00 +0000</pubDate>
+      <description>A short note on why some writing only works when it is unsigned.</description>
+      <content:encoded><![CDATA[
+        <p>There is a particular kind of writing that only works when it is unsigned. Not because the words are dangerous, but because a name turns a thought into a claim, and a claim into something to defend.</p>
+        <p>So this is a place for thinking out loud with the volume turned down. No metrics on the wall, no followers to keep warm, no version of myself to maintain.</p>
+        <p>If you found this, you found it the slow way. That feels like the right speed.</p>
+      ]]></content:encoded>
+    </item>
+
+    <!-- ===== OLDER POST (summary-only example) ===== -->
+    <item>
+      <title>The usefulness of a slow inbox</title>
+      <link>https://your-domain.example/#post-011</link>
+      <guid isPermaLink="false">Tracce-011</guid>
+      <pubDate>Sat, 30 May 2026 09:00:00 +0000</pubDate>
+      <description>I started answering messages once a day, on purpose — and most of the "urgent" resolved itself.</description>
+    </item>
+
+    <!-- ===== Copy this block for each additional post =====
+    <item>
+      <title>POST TITLE</title>
+      <link>https://your-domain.example/#post-010</link>
+      <guid isPermaLink="false">Tracce-010</guid>
+      <pubDate>Tue, 12 May 2026 09:00:00 +0000</pubDate>
+      <description>One- or two-sentence summary.</description>
+    </item>
+    -->
+
+  </channel>
+</rss>
